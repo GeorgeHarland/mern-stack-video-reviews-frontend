@@ -32,15 +32,15 @@ function App() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link>
-              <link to={ "/movies" }>Movies</link>
+              {<Link to={ "/movies" }>Movies</Link>}
             </Nav.Link>
-            <Nav.Link>
-              { user ? (
-                <a onClick={logout}>Logout User</a>
-              ) : (
-                <Link to={ "/Login" }>Log in</Link>
-              )}
-            </Nav.Link>
+              <Nav.Link> 
+               { user ? ( 
+                 <a onClick={logout}>Logout User</a>
+               ) : (
+                 <Link to={ "/Login" }>Log in</Link>
+               )}
+             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
@@ -61,7 +61,7 @@ function App() {
         }>
         </Route>
       </Switch>
-      
+
     </div>
   );
 }
