@@ -32,7 +32,7 @@ const AddReview = props => {
 
         if( editing ){
             // get existing review id
-            data.review.id = props.location.state.currentReview.user_id
+            data.review_id = props.location.state.currentReview._id
             MovieDataService.updateReview(data)
                 .then(response => {
                     setSubmitted(true);
