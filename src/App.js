@@ -16,7 +16,7 @@ function App() {
   const [user, setUser] = React.useState(null)
 
   async function login(user = null) {
-    setUser(null)
+    setUser(user)
   }
 
   async function logout() {
